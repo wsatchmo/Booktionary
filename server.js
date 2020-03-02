@@ -2,12 +2,13 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-
-//Define PORT
-var PORT = process.env.PORT || 3000;
+const routes = require("./routes");
 
 // Init Express
 var app = express();
+
+//Define PORT
+var PORT = process.env.PORT || 3000;
 
 //MIDDLEWARE------------------
 // Morgan for logging requests
@@ -15,16 +16,20 @@ app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+// Serve up static assets (heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
-    //DO WE NEED BOTH OF THESE??? ↑↑↑↑&&↓↓↓↓
+
+// Add routes
+app.use(routes);
+
 // Connect to Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoBooks";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 var db = mongoose.connection;
 
+//CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||
 // In case of mongoose errors
 db.on("error", function(error) {
     console.log("Mongoose Error: ", error);
@@ -33,15 +38,7 @@ db.on("error", function(error) {
 db.once("open", function() {
     console.log("Mongoose connection successful.");
 });
-
-//||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-// Define API routes here  --  BEFORE React routes defined  ||
-//||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-// Send every other request to the React app
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+//CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||
 
 // ================~~~SERVER~~~~==================------------|  |===|===||
 // Start the server                                         //|  |  _√_  ||
