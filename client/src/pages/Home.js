@@ -1,18 +1,18 @@
 import React, {Component} from "react";
 import Book from "../components/Book";
 import API from "../utils/API";
-import {Jumbotron, Card, Form, Footer, Grid, Row, Col} from "react-bootstrap";
-import { List } from "react-bootstrap/lib/Media";
+import {Jumbotron, Card, Form, Row, Col, Container, Button} from "react-bootstrap";
+import {List} from "../components/List";
 
 class Home extends Component {
     state = {
         books: [],
         q: "",
-        message: "Search Books"
+        message: "Searched books will appear here"
     };
 
     handleInputChange = e => {
-        const {name, value} = event.target;
+        const {name, value} = e.target;
         this.setState({
             [name]: value
         });
@@ -52,7 +52,7 @@ class Home extends Component {
 
     render(){
         return(
-            <Grid>
+            <Container>
                 <Row>
                     <Col size="md-12">
                         <Jumbotron>
@@ -60,13 +60,20 @@ class Home extends Component {
                             <h2 className="text-center">Search and Save books from Google</h2>
                         </Jumbotron>
                     </Col>
+                </Row>
+                <Row>
                     <Col size="md-12">
                         <Card title="Search">
-                            <Form
-                                handleInputChange={this.handleInputChange}
-                                handleFormSubmit={this.handleFormSubmit}
-                                q={this.state.q}
-                            />
+                            <Form>
+                                <Form.Label>{this.state.q}</Form.Label>
+                                <Form.Group controlId="Form.ControlTextarea1">
+                                    <Form.Label>Search Books</Form.Label>
+                                    <Form.Control as="textarea" rows="1" handleInputChange={this.handleInputChange}/>
+                                </Form.Group>
+                                <Button variant="primary" type="submit" onClick={this.handleFormSubmit}>
+                                    Submit
+                                </Button>
+                            </Form>
                         </Card>
                     </Col>
                 </Row>
@@ -75,6 +82,7 @@ class Home extends Component {
                         <Card title="Results">
                             {this.state.books.length ? (
                                 <List>
+                                    {console.log("this.state::", this.state)}
                                     {this.state.books.map(book => (
                                         <Book
                                             key={book.id}
@@ -99,8 +107,8 @@ class Home extends Component {
                         </Card>
                     </Col>
                 </Row>
-                <Footer />
-            </Grid>
+            </Container>
+           
         )
     }
 }

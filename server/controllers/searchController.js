@@ -1,9 +1,9 @@
 const axios = require("axios");
-const db = require("../models");
+const db = require("../../models");
 
 //Methods for search
 
-//Searches the API & returns any UNSAVED books
+//Searches the API & returns any unsaved books
 let searchControl = {
     findAll: function(req,res){
         const{query: params} = req;

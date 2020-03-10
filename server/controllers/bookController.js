@@ -1,7 +1,7 @@
-const db = require("../models");
+const db = require("../../models");
 
 //Methods
-bookMethods = {
+const bookMethods = {
     findAll: function(req, res){
         db.Book.find(req.query)
             .then(dbBook => res.json(dbBook))

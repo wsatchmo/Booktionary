@@ -1,9 +1,9 @@
 import React from "react";
-import {Col, Row, Grid, Jumbotron} from "react-bootstrap";
+import {Col, Row, Jumbotron} from "react-bootstrap";
 
 function None() {
   return (
-    <Grid>
+ 
       <Row>
         <Col size="md-12">
           <Jumbotron>
@@ -14,7 +14,7 @@ function None() {
           </Jumbotron>
         </Col>
       </Row>
-    </Grid>
+ 
   );
 }
 

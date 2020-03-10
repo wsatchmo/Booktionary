@@ -5,10 +5,10 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 
 // Init Express
-var app = express();
+const app = express();
 
 //Define PORT
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 //MIDDLEWARE------------------
 // Morgan for logging requests
@@ -25,8 +25,8 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoBooks";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+mongoose.connect(MONGODB_URI, { useCreateIndex: true, useNewUrlParser: true });
 var db = mongoose.connection;
 
 //CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||
@@ -43,6 +43,6 @@ db.once("open", function() {
 // ================~~~SERVER~~~~==================------------|  |===|===||
 // Start the server                                         //|  |  _√_  ||
 app.listen(PORT, () => {                                    //|  |<(¨v¨)>||
-    console.log("App running at localhost:" + PORT + "/");  //|  |  |U|  ||
+    console.log("App running at https://localhost:" + PORT + "/");  //|  |  |U|  ||
 });                                                         //|  |_______||
 // ================~~~SERVER~~~~==================------------|  ~~GOBLIN~~ 

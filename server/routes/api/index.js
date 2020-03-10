@@ -10,7 +10,7 @@ router.use("/search", searchRoutes);
 
 //Otherwise render html
 router.use(function(req, res){
-    res.sendFile(path.join(__dirname, "../../client/build/index.html"));
-});
+    res.sendFile(path.join(__dirname, "../../../client/public/index.html"));
+});  //Change public back to build?
 
 module.exports = router;
