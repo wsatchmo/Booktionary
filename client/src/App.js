@@ -8,7 +8,8 @@ import Nav from "./components/Nav";
 
 function App() {
   return (
-    <Router>
+    <div>Hello World
+    {/*<Router>
       <div className="bg-primary">
         <Nav />
         <Switch>
@@ -18,7 +19,8 @@ function App() {
           <Route component={NoMatch} />
         </Switch>
       </div>
-    </Router>
+    </Router>*/}
+    </div>
   );
 }
 
