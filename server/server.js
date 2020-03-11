@@ -25,9 +25,9 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
 mongoose.connect(MONGODB_URI, { useCreateIndex: true, useNewUrlParser: true });
-var db = mongoose.connection;
+const db = mongoose.connection;
 
 //CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||
 // In case of mongoose errors
@@ -40,9 +40,9 @@ db.once("open", function() {
 });
 //CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||
 
-// ================~~~SERVER~~~~==================------------|  |===|===||
-// Start the server                                         //|  |  _√_  ||
-app.listen(PORT, () => {                                    //|  |<(¨v¨)>||
-    console.log("App running at https://localhost:" + PORT + "/");  //|  |  |U|  ||
-});                                                         //|  |_______||
-// ================~~~SERVER~~~~==================------------|  ~~GOBLIN~~ 
+// ================~~~SERVER~~~~==================--------------------|  |===|===||
+// Start the server                                                 //|  |  _√_  ||
+app.listen(PORT, () => {                                            //|  |<(¨v¨)>||
+    console.log("⚛️ REACT ⚛️ App running on PORT " + PORT + "/");     //|  |  |U|  ||
+});                                                                 //|  |_______||
+// ================~~~SERVER~~~~==================--------------------|  ~~GOBLIN~~ 

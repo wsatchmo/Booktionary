@@ -1,16 +1,17 @@
 const path = require("path");
 const router = require("express").Router();
 const bookRoutes = require("./books");
-const searchRoutes = require("./search");
+const googleRoutes = require("./google");
 
-//Use the Book route
+// Book routes
 router.use("/books", bookRoutes);
-//Use the Search route
-router.use("/search", searchRoutes);
 
-//Otherwise render html
-router.use(function(req, res){
-    res.sendFile(path.join(__dirname, "../../../client/public/index.html"));
-});  //Change public back to build?
+// Google Routes
+router.use("/google", googleRoutes);
+
+// For anything else, render the html page
+router.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "../../../client/build/index.html"));
+});
 
 module.exports = router;

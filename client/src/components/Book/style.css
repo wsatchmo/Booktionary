@@ -2,7 +2,14 @@
   float: right;
 }
 
-@media (max-width: 767px) {
+.book-image{
+  margin-left: 10%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 70%;
+}
+
+@media (max-width: 760px) {
   .btn-container {
     margin-bottom: 15px;
   }
