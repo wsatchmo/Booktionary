@@ -24,6 +24,10 @@ if (process.env.NODE_ENV === "production") {
 // Add routes
 app.use(routes);
 
+app.get("*", function (req, res){
+    res.sendFile("../client/build/index.html");
+})
+
 // Connect to Mongo DB
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
 mongoose.connect(MONGODB_URI, { useCreateIndex: true, useNewUrlParser: true });
