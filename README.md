@@ -23,7 +23,7 @@
 
      * Again, saved books contain the Title, Author(s), and a short description of these books
 
-     * Users can delete these books form the list, dropping them individually from the DB
+     * Users can delete these books from the list, dropping them individually from the DB
 
 ```diff
 ! Deployment !
