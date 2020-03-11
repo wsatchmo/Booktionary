@@ -5,11 +5,12 @@ import Saved from "./pages/Saved";
 import Repo from "./pages/Repo";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import "./App.css";
 
 function App() {
   return (
     <Router>
-      <div className="bg-primary">
+      <div className="bg-primary maindiv">
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
