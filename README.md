@@ -1,6 +1,6 @@
 # Booktionary
 
-![Book](http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62863-books-icon.png | width=250)
+<img src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62863-books-icon.png" data-canonical-src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62863-books-icon.png" width="200"/>
 
 ### A React-based book search app utilizing the Google Books API
 
