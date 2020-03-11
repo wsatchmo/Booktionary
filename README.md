@@ -1,6 +1,6 @@
 # Booktionary
 
-![Book](http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62863-books-icon.png)
+![Book](http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62863-books-icon.png | width=250)
 
 ### A React-based book search app utilizing the Google Books API
 
@@ -29,7 +29,7 @@
 ! Deployment !
 ```
 
-This project is deployed [here on Github Pages](https://gentle-forest-73354.herokuapp.com/ | width=250) 
+This project is deployed [here on Github Pages](https://gentle-forest-73354.herokuapp.com/) 
 
 ```diff
 - Notes -
