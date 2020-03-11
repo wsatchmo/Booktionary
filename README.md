@@ -29,7 +29,7 @@
 ! Deployment !
 ```
 
-This project is deployed [here on Github Pages](https://gentle-forest-73354.herokuapp.com/) 
+This project is deployed [here on Github Pages](https://gentle-forest-73354.herokuapp.com/ | width=250) 
 
 ```diff
 - Notes -
