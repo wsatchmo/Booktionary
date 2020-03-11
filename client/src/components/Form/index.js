@@ -1,5 +1,6 @@
 import React from "react";
 
+//Custom Form class (easier to handleInputChange & handleFormSubmit)
 function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>

@@ -24,6 +24,7 @@ if (process.env.NODE_ENV === "production") {
 // Add routes
 app.use(routes);
 
+//Catch-all for Heroku build
 app.get("*", function (req, res){
     res.sendFile("../client/build/index.html");
 })
@@ -33,7 +34,7 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks"
 mongoose.connect(MONGODB_URI, { useCreateIndex: true, useNewUrlParser: true });
 const db = mongoose.connection;
 
-//CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||
+//CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||~
 // In case of mongoose errors
 db.on("error", function(error) {
     console.log("Mongoose Error: ", error);
@@ -42,7 +43,7 @@ db.on("error", function(error) {
 db.once("open", function() {
     console.log("Mongoose connection successful.");
 });
-//CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||
+//CHECKING FOR MONGOOSE CONNECT OR ERROR====------------|||||||~
 
 // ================~~~SERVER~~~~==================--------------------|  |===|===||
 // Start the server                                                 //|  |  _√_  ||

@@ -3,6 +3,7 @@ import { ListItem } from "../List";
 import { Row, Col } from "react-bootstrap";
 import "./style.css";
 
+//Book component for displaying book objects on the page
 function Book({ title, subtitle, authors, link, description, image, Button }) {
   return (
     <ListItem>

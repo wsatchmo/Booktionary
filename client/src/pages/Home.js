@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 import { List } from "../components/List";
 
+//CSS
 const styles = {
   form : {
     padding: 20,
@@ -13,6 +14,7 @@ const styles = {
   }
 }
 
+//Class Definition
 class Home extends Component {
   state = {
     books: [],
@@ -20,6 +22,7 @@ class Home extends Component {
     message: "Searched books will appear here"
   };
 
+  //Input change event
   handleInputChange = e => {
     const { name, value } = e.target;
     this.setState({
@@ -27,6 +30,13 @@ class Home extends Component {
     });
   };
 
+  //Form submit event
+  handleFormSubmit = e => {
+    e.preventDefault();
+    this.getBooks();
+  };
+
+  //Grab books from the API on search
   getBooks = () => {
     API.getBooks(this.state.q)
       .then(res =>
@@ -42,14 +52,11 @@ class Home extends Component {
       );
   };
 
-  handleFormSubmit = e => {
-    e.preventDefault();
-    this.getBooks();
-  };
-
+  //Save book event
   handleBookSave = id => {
     const book = this.state.books.find(book => book.id === id);
 
+    //Use our API to save a book
     API.saveBook({
       googleId: book.id,
       title: book.volumeInfo.title,
@@ -61,6 +68,7 @@ class Home extends Component {
     }).then(() => this.getBooks());
   };
 
+  //Rendering the Home element tot he page
   render() {
     return (
       <Container>

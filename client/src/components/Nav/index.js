@@ -2,19 +2,20 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
+//Navbar component
 class Nav extends Component {
   state = {
     open: false,
     width: window.innerWidth
   };
 
+  //Navbar Collapse
   updateWidth = () => {
     const newState = { width: window.innerWidth };
 
-    if (this.state.open && newState.width > 991) {
+    if (this.state.open && newState.width > 990) {
       newState.open = false;
     }
-
     this.setState(newState);
   };
 
@@ -30,9 +31,10 @@ class Nav extends Component {
     window.removeEventListener("resize", this.updateWidth);
   }
 
+  //Navbar Component
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark danger mb-2">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
         <Link className="navbar-brand" to="/">
           Booktionary
         </Link>

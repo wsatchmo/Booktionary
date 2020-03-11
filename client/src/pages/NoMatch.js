@@ -1,6 +1,7 @@
 import React from "react";
 import {Jumbotron, Col, Row, Container } from "react-bootstrap";
 
+//No Match component shows a 404 page
 function NoMatch() {
   return (
     <Container fluid>

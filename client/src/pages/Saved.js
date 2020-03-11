@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 import { List } from "../components/List";
 
+//Shows saved books on Saved component
 class Saved extends Component {
   state = {
     books: []
@@ -14,6 +15,7 @@ class Saved extends Component {
     this.getSavedBooks();
   }
 
+  //Gets saved books from the API
   getSavedBooks = () => {
     API.getSavedBooks()
       .then(res =>
@@ -24,10 +26,12 @@ class Saved extends Component {
       .catch(err => console.log(err));
   };
 
+  //Delete book event
   handleBookDelete = id => {
     API.deleteBook(id).then(res => this.getSavedBooks());
   };
 
+  //Render the saved books on the List component
   render() {
     return (
       <Container>
