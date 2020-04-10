@@ -1,6 +1,6 @@
 # Booktionary
 
-<img src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62863-books-icon.png" data-canonical-src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62863-books-icon.png" width="200"/>
+<img src="https://raw.githubusercontent.com/wsatchmo/Booktionary/master/client/src/images/booktionary_logo_dark.png" data-canonical-src="https://raw.githubusercontent.com/wsatchmo/Booktionary/master/client/src/images/booktionary_logo_dark.png" width="100%"/>
 
 ### A React-based book search app utilizing the Google Books API & MongoDB
 
@@ -30,6 +30,8 @@
 ```
 
 This project is deployed [here on Heroku](https://gentle-forest-73354.herokuapp.com/) 
+
+![Screenshots](/client/src/images/screenshot.png)
 
 ```diff
 - Notes -
