@@ -23,13 +23,13 @@
 
      * Again, saved books contain the Title, Author(s), and a short description of these books
 
-     * Users can delete these books form the list, dropping them individually from the DB
+     * Users can delete these books from the list, dropping them individually from the DB
 
 ```diff
 ! Deployment !
 ```
 
-This project is deployed [here on Github Pages](https://gentle-forest-73354.herokuapp.com/) 
+This project is deployed [here on Heroku](https://gentle-forest-73354.herokuapp.com/) 
 
 ```diff
 - Notes -
