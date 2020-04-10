@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import {Jumbotron, Card, Col, Row, Container} from "react-bootstrap";
+import {Card, Col, Row, Container} from "react-bootstrap";
 import Book from "../components/Book";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import { List } from "../components/List";
+import Jumbo from "../components/Jumbo";
 
 //Shows saved books on Saved component
 class Saved extends Component {
@@ -34,15 +35,10 @@ class Saved extends Component {
   //Render the saved books on the List component
   render() {
     return (
-      <Container>
+      <Container className="main">
         <Row>
           <Col size="md-12">
-            <Jumbotron  className="bg-dark text-secondary">
-              <h1 className="text-center">
-                <strong>Booktionary</strong>
-              </h1>
-              <h2 className="text-center">Search and Save books from Google</h2>
-            </Jumbotron>
+            <Jumbo></Jumbo>
           </Col>
         </Row>
         <Row>

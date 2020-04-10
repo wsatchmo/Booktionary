@@ -19,6 +19,11 @@ function App() {
           <Route exact path="/repo" component={Repo} />
           <Route component={NoMatch} />
         </Switch>
+        <div className="box">
+          <div class='wave -one'></div>
+          <div class='wave -two'></div>
+          <div class='wave -three'></div>
+        </div>
       </div>
     </Router>
   );

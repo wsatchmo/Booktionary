@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import {Jumbotron, Col, Row, Container, Card} from "react-bootstrap";
+import {Col, Row, Container, Card} from "react-bootstrap";
 import Form from "../components/Form";
 import Book from "../components/Book";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import { List } from "../components/List";
+import Jumbo from "../components/Jumbo";
 
 //CSS
 const styles = {
@@ -71,17 +72,10 @@ class Home extends Component {
   //Rendering the Home element tot he page
   render() {
     return (
-      <Container>
+      <Container className="main">
         <Row>
           <Col size="md-12">
-            <Jumbotron className="bg-dark text-secondary">
-              <h1 className="text-center">
-                <i className="fa fa-book"></i>
-                <strong>  Booktionary  </strong>
-                <i className="fa fa-book"></i>
-              </h1>
-              <h2 className="text-center">Search and Save books with the Google API</h2>
-            </Jumbotron>
+            <Jumbo></Jumbo>
           </Col>
         </Row>
         <Row>
