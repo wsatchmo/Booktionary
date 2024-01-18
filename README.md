@@ -16,7 +16,7 @@ Utilizes:
 * Google Books API
 * React-Bootstrap Framework
 
-Searches books from the Google Books api and populates the page in real time using React. Saves searches and enables users to save books as well as status (read, reading list, rating) within a MongoDB database linked to an id assigned to the user's computer, using axios requests. All updates occur in real time as well. Uses React-Bootstrap framework for a highly modular user experience that fits with modern HCI standards. 
+Searches books from the Google Books api and populates the page in real time using React. Saves searches and enables users to save books as well as status (read, reading list, rating) within a MongoDB database linked to an id assigned to the user's computer, using axios requests. All updates occur in real time as well. Utilizes React-Bootstrap framework for a highly modular user experience that fits with modern HCI standards. 
 
 ```diff
 + WHAT IT DOES +
