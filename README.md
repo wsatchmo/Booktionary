@@ -4,9 +4,21 @@
 
 ### A React-based book search app utilizing the Google Books API & MongoDB
 
+```diff
+! HOW IT WORKS !
+```
+Utilizes:
+* Mongo
+* Express
+* React
+* Node
+* Google Books API
+* React-Bootstrap Framework
+
+Searches books from the Google Books api and populates the page in real time using React. Saves searches and enables users to save books as well as status (read, reading list, rating) within a MongoDB database linked to an id assigned to the user's computer. All updates occur in real time as well. Uses React-Bootstrap framework for a highly modular user experience that fits with modern HCI standards. 
 
 ```diff
-+ How it works +
++ WHAT IT DOES +
 ```
 
   - On the Home page of the app, users may search for a book using the search form
@@ -17,7 +29,7 @@
 
      * Users can save books into a saved list, which adds them to a Mongo Database
 
-     * Books already saved to the Database are not shown
+     * Books already saved to the Database are not shown in search
 
   - On the Saved Books page of the app, users will find the books they have saved
 
@@ -26,10 +38,11 @@
      * Users can delete these books from the list, dropping them individually from the DB
 
 ```diff
-! Deployment !
+! ~DEPLOYMENT~ !
 ```
+UPDATE: As Heroku has removed all free plans, this project is no longer deployed. I am currently working on finding it a home. It will likely be redeployed via [Google Firebase](https://firebase.google.com) in the future.
 
-This project is deployed [here on Heroku](https://gentle-forest-73354.herokuapp.com/) 
+DEPLOYED SCREENSHOT:
 
 ![Screenshots](/client/src/images/screenshot.png)
 
